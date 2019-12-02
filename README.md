@@ -41,7 +41,7 @@ The name given to the codebox by its creator.
 ```bash
 booste login {optionally enter username here}
 ```
-Booste login verifies your user account as valid and logs you in indefinitely.
+Verifies your user account as valid and logs you in indefinitely.
 
 You may pass your Booste username directly into the command, or enter it when prompted. The password entry prompt will follow. For password resets, please contact us at password.help@booste.io.
 
@@ -49,7 +49,7 @@ You may pass your Booste username directly into the command, or enter it when pr
 ```C
 booste logout
 ```
-Booste logout logs the current active user out of the system. There may only be one logged-in account per device.
+Logs the current active user out of the system. There may only be one logged-in account per device.
 
 ### Codebox Activation
 
@@ -57,7 +57,7 @@ Booste logout logs the current active user out of the system. There may only be 
 booste activate {enter local codebox ID here}
 ```
 
-Booste activate connects you into the selected codebox. Active filesync with the codebox begins, and you are placed within Booste's SSH wrapper, with the ability to interact with the codebox via Unix commands
+Connects you into the selected codebox. Active filesync with the codebox begins, and you are placed within Booste's SSH wrapper, with the ability to interact with the codebox via Unix commands
 
 Within the activated session, you can leave the codebox by typing the command
 ```bash
@@ -78,9 +78,9 @@ Lists the codeboxes to which you have access.
 ```C
 booste start {optionally enter local codebox ID here}
 ```
-Booste start will start the server hosting your codebox.
+Starts the server hosting your codebox.
 
-You may pass the desired local id directly into the command, or enter it when prompted.
+You may pass the desired local ID directly into the command, or enter it when prompted.
 
 This will not activate a codebox.
 
