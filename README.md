@@ -28,6 +28,13 @@ The running state of the server hosting the codebox. The state may be changed wi
 ### Name 
 The name given to the codebox by its creator.
 
+## Installation
+
+Run this command in your terminal to install the CLI tool via [pip](https://pip.pypa.io/en/stable/):
+
+```bash
+pip install booste-cli
+```
 ## CLI Usage
 
 ### Login
