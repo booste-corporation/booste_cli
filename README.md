@@ -3,6 +3,10 @@ The Booste CLI (command line interface) is a tool to easily run code in perosnal
 
 This is to avoid dependency issues, platform conflicts, and compute restrictions of local hardware.
 
+## Installation
+
+Run this command in your terminal to install the CLI tool via [pip](https://pip.pypa.io/en/stable/):
+
 ## Terminology 
 
 ### Codebox
@@ -27,10 +31,6 @@ The unique ID of that codebox in the Booste system, to be shared with team membe
 The running state of the server hosting the codebox. The state may be changed with the "start" and "stop" commands.
 ### Name 
 The name given to the codebox by its creator.
-
-## Installation
-
-Run this command in your terminal to install the CLI tool via [pip](https://pip.pypa.io/en/stable/):
 
 ```bash
 pip install booste-cli
