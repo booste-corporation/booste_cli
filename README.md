@@ -6,6 +6,9 @@ This is to avoid dependency issues, platform conflicts, and compute restrictions
 ## Installation
 
 Run this command in your terminal to install the CLI tool via [pip](https://pip.pypa.io/en/stable/):
+```bash
+pip install booste-cli
+```
 
 ## Terminology 
 
@@ -32,9 +35,6 @@ The running state of the server hosting the codebox. The state may be changed wi
 ### Name 
 The name given to the codebox by its creator.
 
-```bash
-pip install booste-cli
-```
 ## CLI Usage
 
 ### Login
