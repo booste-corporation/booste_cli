@@ -1,4 +1,4 @@
-![BoosteLogo](diagrams/Logo_Primary_NonTransparent.png){height="50%" width="50%"}
+![BoosteLogo](diagrams/Logo_Primary_NonTransparent.png)
 
 
 
