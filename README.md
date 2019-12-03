@@ -27,6 +27,10 @@ Or are you having trouble with batch processing and compilation of lengthy proje
 Don't fret, using a codebox to do the heavy lifting provides you with way more processing power
 than laptops that cost you more than $2000+, thus saving you time and money.
 
+##### *Coming Soon:*
+
+ - Run IoT and Edge Computing code directly from your laptop for different devices with ease.
+
 ## Installation
 
 Run this command in your terminal to install the CLI tool via [pip](https://pip.pypa.io/en/stable/):
