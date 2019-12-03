@@ -5,7 +5,11 @@ Using personalized enivronments that can easily be shared across your team elimi
 Booste has an endless number of applications with easy integration.
 A few possible use cases: 
 
-### 1. Before pushing to a CI/CD pipeline, you can make sure your team's environment is the same by sharing a codebox.
+### 1. Before CI/CD Pipeline
+
+You can use a codebox to make sure that your teams environments are in sync before you put it through a CI/CD pipeline
+so you can avoid frustrating compatibility isssues with your code.
+
 ![Diagram](diagrams/.Pre_CI_CD.png)
 
 ## Installation
