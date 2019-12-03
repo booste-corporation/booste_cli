@@ -161,4 +161,4 @@ You are free to re-join the codebox at any time with the "join" command as it do
 
 ## License 
 
-[LinkToLicense](Booste_EULA.pdf)
+Here is a link to the [EULA(End-User License Agreement)](Booste_EULA.pdf)
