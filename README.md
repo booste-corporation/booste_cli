@@ -12,6 +12,12 @@ so you can avoid frustrating compatibility isssues with your code.
 
 ![Diagram](diagrams/.Pre_CI_CD.png)
 
+### 2. Get up and running in different environments in no time
+
+Switch between different environments at with ease, allowing for rapid development and testing.
+
+![Diagram](diagrams/env_change.png)
+
 ## Installation
 
 Run this command in your terminal to install the CLI tool via [pip](https://pip.pypa.io/en/stable/):
