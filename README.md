@@ -161,4 +161,4 @@ You are free to re-join the codebox at any time with the "join" command as it do
 
 ## License 
 
-Please read the document at the root of this repository for the end-user licensing agreement.
+[LinkToLicense](Booste_EULA.pdf)
