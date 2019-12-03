@@ -7,8 +7,8 @@ A few possible use cases:
 
 ### 1. Before CI/CD Pipeline
 
-You can use a codebox to make sure that your teams environments are in sync before you put it through a CI/CD pipeline
-so you can avoid frustrating compatibility isssues with your code.
+**You can use a codebox to make sure that your teams environments are in sync before you put it through a CI/CD pipeline
+so you can avoid frustrating compatibility isssues with your code.**
 
 ![Diagram](diagrams/.Pre_CI_CD.png)
 
