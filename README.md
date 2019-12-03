@@ -6,7 +6,7 @@ Booste has an endless number of applications with easy integration.
 A few possible use cases: 
 
 ### 1. Before pushing to a CI/CD pipeline, you can make sure your team's environment is the same by sharing a codebox.
-![Diagram](.Pre_CI_CD.png)
+![Diagram](diagrams/.Pre_CI_CD.png)
 
 ## Installation
 
