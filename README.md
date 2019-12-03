@@ -18,6 +18,15 @@ Switch between different environments at with ease, allowing for rapid developme
 
 ![Diagram](diagrams/env_change.png)
 
+### 3. Offload GPU Processing
+
+Don't have a system you can do GPU intensive work on? 
+
+Or are you having trouble with batch processing and compilation of lengthy projects?
+
+Don't fret, using a codebox to do the heavy lifting provides you with way more processing power
+than laptops that cost you more than $2000+, thus saving you time and money.
+
 ## Installation
 
 Run this command in your terminal to install the CLI tool via [pip](https://pip.pypa.io/en/stable/):
