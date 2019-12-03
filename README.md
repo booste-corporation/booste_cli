@@ -1,3 +1,7 @@
+![BoosteLogo](diagrams/Logo_Primary_NonTransparent.png)
+
+
+
 # Booste CLI 
 The Booste CLI (command line interface) is a tool to easily run code on personalized environments on the cloud, rather than on local devices.
 Using personalized enivronments that can easily be shared across your team eliminates dependency issues, platform conflicts, and compute restrictions of local hardware.
