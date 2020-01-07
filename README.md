@@ -41,6 +41,7 @@ Run this command in your terminal to install the CLI tool via [pip](https://pip.
 ```bash
 pip install booste-cli
 ```
+We recommend using no earlier than version 0.1.6
 
 ## Terminology 
 
@@ -83,20 +84,29 @@ booste logout
 ```
 Logs the current active user out of the system. There may only be one logged-in account per device.
 
+### One-Line Commands
+```C
+booste {codebox local ID} {unix command to be ran remotely}
+```
+Executes the given command in the specified codebox.
+For example, to run a python file in codebox #2, use:
+```bash
+booste 2 python path/to/file.py
+```
+
 ### Codebox Activation
 
 ```C
 booste activate {enter local codebox ID here}
 ```
+Connects you into the selected codebox. You are placed within Booste's SSH wrapper, with the ability to interact with the codebox via Unix commands. 
 
-Connects you into the selected codebox. Active filesync with the codebox begins, and you are placed within Booste's SSH wrapper, with the ability to interact with the codebox via Unix commands
+It is through Activate that users set up the codebox environment, through tools such as pip or npm. When setting up the codebox, make sure that packages are available globally (no virtual environments or containers).
 
 Within the activated session, you can leave the codebox by typing the command
 ```bash
 deactivate
 ```
-
-It is vital to use this rather than forcefully backing out of the CLI  with Ctrl+C or Cmd+C, as deactivate triggers the shutdown of the active filesync. Filesync will fail in future activation attempts if deactivate is not used. Should this happen, stop the codebox and start it again.
 
 ### List All Codeboxes
 
@@ -148,6 +158,13 @@ You may pass the desired codebox id directly into the command, or enter it when 
 
 The full codebox "ID" and the password must be given to you by a team member, to ensure security.
 
+### See Codebox Members
+
+```bash
+booste info {optionally enter codebox ID here}
+```
+Prints the list of member usernames in a given codebox.
+
 ### Leave a Codebox
 
 ```bash
@@ -158,6 +175,20 @@ Removes you as a member in a current codebox.
 You may pass the desired local id directly into the command, or enter it when prompted.
 
 You are free to re-join the codebox at any time with the "join" command as it does not stop the the server hosting your codebox.
+
+### Report a Bug
+
+```bash
+booste report
+```
+Files a bug report. You will be prompted to explain the bug.
+
+### Ask a Question 
+
+```bash
+booste ask
+```
+Texts your question directly to a founder's cell phone. You will be prompted to input your question and reply-to phone number.
 
 ## License 
 
