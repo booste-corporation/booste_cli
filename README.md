@@ -144,20 +144,20 @@ You may pass the desired local id directly into the command, or enter it when pr
 ### Create A New Codebox
 
 ```bash
-booste new {optionally enter codebox ID here}
+booste new {optionally enter codebox name here}
 ```
 Creates a new codebox and joins you into it as the first team member.
 
 You may pass the desired codebox name directly into the command, or enter it when prompted. A password entry and password re-entry prompt will follow.
 
-Codebox names are not required to be unique, though for clarity we recommend avoiding duplicates.
+Codebox names are not required to be unique, though for clarity we recommend avoiding duplicates with your team.
 
 Codeboxes are password protected, and this password is needed for others to join your codebox. Be sure to save it. For codebox password resets, please contact us at password.help@booste.io.
 
 ### Join An Existing Codebox
 
 ```bash
-booste join {optionally enter codebox ID here}
+booste join {optionally enter full codebox ID here}
 ```
 Adds you as a member into an existing codebox.
 
@@ -168,7 +168,7 @@ The full codebox "ID" and the password must be given to you by a team member, to
 ### See Codebox Members
 
 ```bash
-booste info {optionally enter codebox ID here}
+booste info {optionally enter local codebox ID here}
 ```
 Prints the list of member usernames in a given codebox.
 
