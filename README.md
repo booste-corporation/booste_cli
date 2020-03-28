@@ -2,16 +2,16 @@
 
 # Booste CLI 
 The Booste CLI (command line interface) makes remote development as easy as local. 
-Run code on personalized environments on the cloud, rather than on the local hardware.
+Run code in personalized environments on the cloud, rather than on the local hardware.
 Booste remote evironments are easily be shared across your team, eliminating dependency issues, platform conflicts, and compute restrictions of local hardware.
 
-**Booste has an number of potential use cases.
+**Booste has a number of potential use cases.
 A few possible use cases:**
 
 ### 1. Before CI/CD Pipeline
 
 You can use a codebox to make sure that your team's environments are in sync before you put it through a CI/CD pipeline
-so you can avoid frustrating compatibility isssues with your code.
+so you can avoid frustrating compatibility issues with your code.
 
 ![Diagram](diagrams/.Pre_CI_CD.png)
 
@@ -64,7 +64,7 @@ Notes on current CLI version:
  - Filesync starts only when the first one-line-command or "activate" command is ran. It will remain live until remote or local shutdown.
 
 ### Local ID 
-A simple ID, which you'll use to specify that codebox for the "activate", "start", and "stop" commands.
+A simple ID, which you'll use to specify that codebox for various Booste commands.
 
 ### ID 
 The unique ID of that codebox in the Booste system, to be shared with team members who wish to join that codebox, with the command "join".
@@ -78,6 +78,15 @@ The name given to the codebox by its creator.
 
 
 # CLI Usage
+
+### Get Help
+```bash
+booste
+```
+```bash
+booste --help
+```
+Prints a documentation-like help page to the console.
 
 ### Login
 ```bash
@@ -105,11 +114,11 @@ For example, to run a python file in codebox #2, use:
 booste 2 python3 path/to/file.py
 ```
 
-If a default codebox is set, the local ID may be ommitted.
+If a default codebox is set, the local ID may be omitted:
 ```bash
 booste default 2
-```
-```bash
+...
+...
 booste python3 path/to/file.py
 ```
 
@@ -122,7 +131,7 @@ booste activate {optional: codebox local ID}
 Connects you into the selected codebox. You are placed within Booste's SSH wrapper, with the ability to interact with the codebox via Unix commands. 
 
 You may pass a codebox local ID directly into the command, or enter it when prompted.
-If a default codebox is set, the local ID may be ommitted.
+If a default codebox is set, the local ID may be omitted.
 
 It is through Activate that users set up the codebox environment, through tools such as pip or npm. When setting up the codebox, make sure that packages are available globally (no virtual environments or containers).
 
@@ -153,7 +162,7 @@ booste start {optional: codebox local ID}
 Starts the server hosting your codebox.
 
 You may pass a codebox local ID directly into the command, or enter it when prompted.
-If a default codebox is set, the local ID may be ommitted.
+If a default codebox is set, the local ID may be omitted.
 
 The codebox will remain running until either the remote or local machines are shut down.
 
@@ -166,7 +175,7 @@ booste stop {optional: codebox local ID}
 Booste stop will stop the server hosting your codebox.
 
 You may pass a codebox local ID directly into the command, or enter it when prompted.
-If a default codebox is set, the local ID may be ommitted.
+If a default codebox is set, the local ID may be omitted.
 
 ### Restart A Codebox
 ```C
@@ -175,7 +184,7 @@ booste restart {optional: codebox local ID}
 Booste stop will stop and then restart the server hosting your codebox.
 
 You may pass a codebox local ID directly into the command, or enter it when prompted.
-If a default codebox is set, the local ID may be ommitted.
+If a default codebox is set, the local ID may be omitted.
 
 ### Create A New Codebox
 ```bash
@@ -206,7 +215,7 @@ booste info {optional: codebox local ID}
 Prints the list of member usernames in a given codebox.
 
 You may pass a codebox local ID directly into the command, or enter it when prompted.
-If a default codebox is set, the local ID may be ommitted.
+If a default codebox is set, the local ID may be omitted.
 
 ### Leave a Codebox
 ```bash
@@ -215,7 +224,7 @@ booste leave {optional: codebox local ID}
 Removes you as a member from a codebox that you previously joined.
 
 You may pass a codebox local ID directly into the command, or enter it when prompted.
-If a default codebox is set, the local ID may be ommitted.
+If a default codebox is set, the local ID may be omitted.
 
 You are free to re-join the codebox at any time with the "join" command as it does not stop the the server hosting your codebox.
 
@@ -228,7 +237,7 @@ booste delete {optional: codebox local ID}
 Removes all members from a codebox that you previously created, and deletes it.
 
 You may pass a codebox local ID directly into the command, or enter it when prompted.
-If a default codebox is set, the local ID may be ommitted.
+If a default codebox is set, the local ID may be omitted.
 
 You cannot revive a deleted codebox.
 
