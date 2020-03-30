@@ -32,39 +32,8 @@ than $2000+ laptops, saving time and money.
 
 
 
-## Installation
 
-Run this command in your terminal to install the CLI tool via [pip](https://pip.pypa.io/en/stable/):
-```bash
-pip install booste-cli
-```
-We recommend using the most recent version.
-
-
-
-## Supported Tech Stacks
-As of release 0.1.12
-
-### Supported:
-Apps with text output only.
-- Any<sub>1</sub> interpreted language, such as Python, Node.js, bash.
-- Any<sub>1</sub> compiled language<sub>2</sub>, such as C, C++, Java, Go, Rust.
-
-1) A member of the codebox may need to install the language interpreter/compiler into the codebox, via the activate command.
-2) The compilation process runs in the codebox, and the resulting compiled file will be created in the codebox. 
-   Remote files do not currently sync down to local, so the compiled file will not exist locally.
-   When typing a one-liner, the path to the compiled file path will not be recognized locally, but it does indeed exist remotely and will run.
-
-### Not Supported:
-Apps with a visual aspect. 
-- Web development through a localhost
-- Desktop GUI, such as Electron
-- AR/VR
-- Game engines, such as Unity
-
-
-
-## Terminology 
+# Terminology 
 
 ### Codebox
 Codebox refers to the remote environment in which teams run their code.
@@ -96,6 +65,38 @@ The running state of the server hosting the codebox. The state may be changed wi
 
 ### Name 
 The name given to the codebox by its creator.
+
+
+
+
+# Installation
+
+Run this command in your terminal to install the CLI tool via [pip](https://pip.pypa.io/en/stable/):
+```bash
+pip3 install booste-cli
+```
+We recommend using the most recent version.
+
+### Supported Tech Stacks
+As of release 0.1.12
+
+### Supported:
+Apps with text output only.
+- Any<sub>1</sub> interpreted language, such as Python, Node.js, bash.
+- Any<sub>1</sub> compiled language<sub>2</sub>, such as C, C++, Java, Go, Rust.
+
+1) A member of the codebox may need to install the language interpreter/compiler into the codebox, via the activate command.
+2) The compilation process runs in the codebox, and the resulting compiled file will be created in the codebox. 
+   Remote files do not currently sync down to local, so the compiled file will not exist locally.
+   When typing a one-liner, the path to the compiled file path will not be recognized locally, but it does indeed exist remotely and will run.
+
+### Not Supported:
+Apps with a visual aspect. 
+- Web development through a localhost
+- Desktop GUI, such as Electron
+- AR/VR
+- Game engines, such as Unity
+
 
 
 
