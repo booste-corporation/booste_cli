@@ -235,15 +235,15 @@ The full codebox "ID" and the password must be given to you by a team member, to
 booste info {optional: codebox local ID}
 ```
 Prints detailed information about the codebox, including:
-    Name
-    Unique ID
-    Owner - The user who created it
-    Members
-    Instance Type - The hosting virtual machine, in [AWS EC2 terminology](https://aws.amazon.com/ec2/instance-types/)
-    Server Region
-    Lifespan - The time that a codebox remains live before being automatically stopped. The default is 4 hrs.
-    State
-    IP - The public IP, used to access web servers through ports 3000 or 8000-8100
+- Name
+- Unique ID
+- Owner - The user who created it
+- Members
+- Instance Type - The hosting virtual machine, in [AWS EC2 terminology](https://aws.amazon.com/ec2/instance-types/)
+- Server Region
+- Lifespan - The time that a codebox remains live before being automatically stopped. The default is 4 hrs.
+- State
+- IP - The public IP, used to access web servers through ports 3000 or 8000-8100
 
 You may pass a codebox local ID directly into the command, or enter it when prompted.
 If a default codebox is set, the local ID may be omitted.
