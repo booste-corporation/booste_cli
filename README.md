@@ -78,12 +78,12 @@ pip3 install booste-cli
 We recommend using the most recent version.
 
 ### Supported Tech Stacks
-As of release 0.1.12
+As of release 0.1.17
 
 ### Supported:
-Apps with text output only.
 - Any<sub>1</sub> interpreted language, such as Python, Node.js, bash.
 - Any<sub>1</sub> compiled language<sub>2</sub>, such as C, C++, Java, Go, Rust.
+- Web servers running through ports 3000, or 8000-8100.
 
 1) A member of the codebox may need to install the language interpreter/compiler into the codebox, via the activate command.
 2) The compilation process runs in the codebox, and the resulting compiled file will be created in the codebox. 
@@ -91,8 +91,7 @@ Apps with text output only.
    When typing a one-liner, the path to the compiled file path will not be recognized locally, but it does indeed exist remotely and will run.
 
 ### Not Supported:
-Apps with a visual aspect. 
-- Web development through a localhost
+Apps with GUI based engines.
 - Desktop GUI, such as Electron
 - AR/VR
 - Game engines, such as Unity
@@ -151,7 +150,7 @@ This command is meant to execute code files. It will ignore commands that do not
 ```C
 booste activate {optional: codebox local ID}
 ```
-Connects you into the selected codebox. You are placed within Booste's SSH wrapper, with the ability to interact with the codebox via Unix commands. 
+Connects you into the selected codebox. You are placed into an SSH session, with the ability to interact with the codebox via Unix commands. 
 
 You may pass a codebox local ID directly into the command, or enter it when prompted.
 If a default codebox is set, the local ID may be omitted.
@@ -160,7 +159,7 @@ It is through Activate that users set up the codebox environment, through tools 
 
 Within the activated session, you can leave the codebox by typing the command
 ```bash
-deactivate
+logout
 ```
 
 ### List All Codeboxes
@@ -231,11 +230,20 @@ You may pass the desired codebox id directly into the command, or enter it when 
 
 The full codebox "ID" and the password must be given to you by a team member, to ensure security.
 
-### See Codebox Members
+### See Codebox Information
 ```bash
 booste info {optional: codebox local ID}
 ```
-Prints the list of member usernames in a given codebox.
+Prints detailed information about the codebox, including:
+    Name
+    Unique ID
+    Owner - The user who created it
+    Members
+    Instance Type - The hosting virtual machine, in [AWS EC2 terminology](https://aws.amazon.com/ec2/instance-types/)
+    Server Region
+    Lifespan - The time that a codebox remains live before being automatically stopped. The default is 4 hrs.
+    State
+    IP - The public IP, used to access web servers through ports 3000 or 8000-8100
 
 You may pass a codebox local ID directly into the command, or enter it when prompted.
 If a default codebox is set, the local ID may be omitted.
