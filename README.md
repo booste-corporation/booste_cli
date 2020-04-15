@@ -132,16 +132,16 @@ Apps with GUI based engines.
 # <a name="usage"></a> CLI Usage
 
 ### <a name="usage-help"></a> Get Help
-```bash
+```C
 booste
 ```
-```bash
+```C
 booste --help
 ```
 Prints a documentation-like help page to the console.
 
 ### <a name="usage-login"></a> Login
-```bash
+```C
 booste login {optional: username}
 ```
 Verifies your user account as valid and logs you in indefinitely.
@@ -169,8 +169,8 @@ booste 2 python3 path/to/file.py
 If a default codebox is set, the local ID may be omitted:
 ```bash
 booste default 2
-...
-...
+```
+```bash
 booste python3 path/to/file.py
 ```
 
@@ -188,18 +188,18 @@ If a default codebox is set, the local ID may be omitted.
 It is through Activate that users set up the codebox environment, through tools such as [pip](https://pip.pypa.io/en/stable/), [npm](https://www.npmjs.com/), or [gem](https://rubygems.org/). When setting up the codebox, make sure that packages are available globally (no virtual environments or containers).
 
 Within the activated session, you can leave the codebox by typing the command
-```bash
+```C
 logout
 ```
 
 ### <a name="usage-list"></a> List All Codeboxes
-```bash
+```C
 booste list
 ```
 Lists the codeboxes to which you have access.
 
 ### <a name="usage-default"></a> Set a Default Codebox
-```bash
+```C
 booste default {optional: codebox local ID / "clear"}
 ```
 Saves a codebox as the default codebox, so that local IDs do not need to be explicitly provided with each command.
@@ -239,7 +239,7 @@ You may pass a codebox local ID directly into the command, or enter it when prom
 If a default codebox is set, the local ID may be omitted.
 
 ### <a name="usage-new"></a> Create a New Codebox
-```bash
+```C
 booste new {optional: codebox name}
 ```
 Creates a new codebox and joins you into it as the first team member.
@@ -251,7 +251,7 @@ Codebox names are not required to be unique, though for clarity we recommend avo
 Codeboxes are password protected, and this password is needed for others to join your codebox. Be sure to save it. For codebox password resets, please contact us at password.help@booste.io.
 
 ### <a name="usage-join"></a> Join an Existing Codebox
-```bash
+```C
 booste join {optional: codebox full ID}
 ```
 Adds you as a member into an existing codebox.
@@ -261,7 +261,7 @@ You may pass the desired codebox id directly into the command, or enter it when 
 The full codebox "ID" and the password must be given to you by a team member, to ensure security.
 
 ### <a name="usage-info"></a> See Codebox Information
-```bash
+```C
 booste info {optional: codebox local ID}
 ```
 Prints detailed information about the codebox, including:
@@ -279,7 +279,7 @@ You may pass a codebox local ID directly into the command, or enter it when prom
 If a default codebox is set, the local ID may be omitted.
 
 ### <a name="usage-leave"></a> Leave a Codebox
-```bash
+```C
 booste leave {optional: codebox local ID}
 ```
 Removes you as a member from a codebox that you previously joined.
@@ -292,7 +292,7 @@ You are free to re-join the codebox at any time with the "join" command as it do
 To leave a codebox you created, use Delete.
 
 ### <a name="usage-delete"></a> Permanently Delete a Codebox
-```bash
+```C
 booste delete {optional: codebox local ID}
 ```
 Removes all members from a codebox that you previously created, and deletes it.
@@ -305,20 +305,20 @@ You will be prompted to enter the codebox's password. For password resets, pleas
 You cannot revive a deleted codebox.
 
 ### <a name="usage-report"></a> Report a Bug
-```bash
+```C
 booste report
 ```
 Files a bug report. You will be prompted to explain the bug.
 If bugs become preventative, try running "reset" (below)
 
 ### <a name="usage-ask"></a> Ask a Question 
-```bash
+```C
 booste ask
 ```
 Texts your question directly to a founder's cell phone. You will be prompted to input your question and reply-to phone number.
 
 ### <a name="usage-reset"></a> Reset the Client (bug cleaning)
-```bash
+```C
 booste reset
 ```
 Clears caches, closes hanging ssh tunnels, and kills filesync.
