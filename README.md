@@ -80,7 +80,9 @@ The name given to the codebox by its creator.
 
 # <a name="installation"></a> Installation
 
-Run this command in your terminal to install the CLI tool via [pip](https://pip.pypa.io/en/stable/):
+If you have not already, download and install [python3](https://www.python.org/downloads/) and [pip3](https://pip.pypa.io/en/stable/).
+
+Run this command in your terminal to install the CLI tool:
 ```bash
 pip3 install booste-cli
 ```
@@ -122,7 +124,6 @@ Apps with GUI based engines.
 - Desktop GUI, such as Electron
 - AR/VR
 - Game engines, such as Unity
-
 
 
 
