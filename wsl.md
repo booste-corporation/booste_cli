@@ -32,10 +32,11 @@ Navigate into it to confirm.
 cd ~/Booste
 ```
 
-To make files in the filesync directory editable by Windows-based GUI code editors, we'll replace the default filesync directory with a symlink to the directory we created before.
+To make files in the filesync directory editable by Windows-based GUI code editors, we'll replace the default filesync directory with a symlink to the directory we created earlier.
 ```bash
 rm -rf ~/Booste
 ln -s /mnt/c/Users/{your-user-name}/{wherever}/Booste/ ~/Booste
 ```
 
 You've now pointed the address ~/Booste toward your custom filesync location.
+Booste commands must still be ran from within the symlink path ~/Booste, but code may be edited from your new location.
