@@ -18,13 +18,14 @@ Booste remote evironments are shareable across your team, eliminating dependency
 - [Name](#terminology-name)
 
 [Installation](#installation)
+- [Supported Platforms](#installation-supported-platforms)
 - [Supported Tech Stacks](#installation-supported-stacks)
 
 [CLI Usage](#usage)
 - [Get Help](#usage-help)
 - [Login](#usage-login)
 - [Logout](#usage-logout)
-- [Run a Process](#usage-vanilla)
+- [Execute Code In Codebox](#usage-vanilla)
 - [Configure Codebox (ssh)](#usage-activate)
 - [List All Codeboxes](#usage-list)
 - [Set a Default Codebox](#usage-default)
@@ -53,8 +54,10 @@ At the current state of Booste, each codebox is an isolated server instance, sha
 ### <a name="terminology-active-filesync"></a> Active Filesync
 Active filesync is a background process that syncronizes the codebox files to your local Booste directory.
 
-For Linux users, the synced directory is found at the path /home/{your-user-name}/Booste.
-For Mac Users, it is at /user/{your-user-name}/Booste.
+The synced directory sits at the user level:
+```bash
+~/Booste
+```
 
 While filesync is running, any files created, modified, or deleted within this local directory will be automatically uploaded to the codebox. The sync happens in less than one second for most text-based file saves. 
 
@@ -83,7 +86,25 @@ pip3 install booste-cli
 ```
 We recommend using the most recent version.
 
-### <a name="installation-supported-stacks"></a> Supported Tech Stacks
+
+
+# <a name="installation-supported-platforms"></a> Supported Platforms
+As of release 0.1.25
+![BoosteLogo](diagrams/SupportedPlatforms.png)
+
+### Supported:
+- Linux
+- MacOS
+- Windows Subsystem For Linux (WSL)<sub>1</sub>
+
+1) Booste can be installed and ran in [Windows 10 WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), with some setup. [See here for WSL setup instructions.](wsl.md)
+
+### Not Supported:
+- Windows Command Prompt
+- Windows Power Shell
+
+
+# <a name="installation-supported-stacks"></a> Supported Tech Stacks
 As of release 0.1.25
 
 ### Supported:
