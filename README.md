@@ -51,6 +51,8 @@ Codebox refers to the remote environment in which teams run their code.
 
 At the current state of Booste, each codebox is an isolated server instance, shared only by other verified team members in that codebox. The environment, including packages and interpreters, are shared by the team. Each team member has their own repo, sitting side-by-side in the codebox.
 
+![BoosteCodebox](diagrams/Shared.png)
+
 ### <a name="terminology-active-filesync"></a> Active Filesync
 Active filesync is a background process that syncronizes the codebox files to your local Booste directory.
 
