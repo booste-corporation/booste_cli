@@ -198,7 +198,7 @@ booste list
 ```
 Lists the codeboxes to which you have access.
 
-### <a name="usage-default"></a> Set A Default Codebox
+### <a name="usage-default"></a> Set a Default Codebox
 ```bash
 booste default {optional: codebox local ID / "clear"}
 ```
@@ -207,7 +207,7 @@ Saves a codebox as the default codebox, so that local IDs do not need to be expl
 You may pass a codebox local ID directly into the command, or enter it when prompted.
 If "clear" is passed in rather than a local ID, any pre-existing default codebox will be removed.
 
-### <a name="usage-start"></a> Start A Codebox
+### <a name="usage-start"></a> Start a Codebox
 ```C
 booste start {optional: codebox local ID}
 ```
@@ -220,7 +220,7 @@ The codebox will remain running until either the remote or local machines are sh
 
 This will not activate a codebox.
 
-### <a name="usage-stop"></a> Stop A Codebox
+### <a name="usage-stop"></a> Stop a Codebox
 ```C
 booste stop {optional: codebox local ID}
 ```
@@ -229,7 +229,7 @@ Booste stop will stop the server hosting your codebox.
 You may pass a codebox local ID directly into the command, or enter it when prompted.
 If a default codebox is set, the local ID may be omitted.
 
-### <a name="usage-restart"></a> Restart A Codebox
+### <a name="usage-restart"></a> Restart a Codebox
 ```C
 booste restart {optional: codebox local ID}
 ```
@@ -238,7 +238,7 @@ Booste stop will stop and then restart the server hosting your codebox.
 You may pass a codebox local ID directly into the command, or enter it when prompted.
 If a default codebox is set, the local ID may be omitted.
 
-### <a name="usage-new"></a> Create A New Codebox
+### <a name="usage-new"></a> Create a New Codebox
 ```bash
 booste new {optional: codebox name}
 ```
@@ -250,7 +250,7 @@ Codebox names are not required to be unique, though for clarity we recommend avo
 
 Codeboxes are password protected, and this password is needed for others to join your codebox. Be sure to save it. For codebox password resets, please contact us at password.help@booste.io.
 
-### <a name="usage-join"></a> Join An Existing Codebox
+### <a name="usage-join"></a> Join an Existing Codebox
 ```bash
 booste join {optional: codebox full ID}
 ```
