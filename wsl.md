@@ -2,7 +2,7 @@
 
 Booste runs through the WSL terminal as it would on Linux. 
 
-The filesync directory, created at ~/Booste is not visible from Windows-based IDEs and code editors.
+Unfortunately, the filesync directory, created at ~/Booste is not visible from Windows-based IDEs and code editors.
 
 This can be worked around with [symlinks](https://en.wikipedia.org/wiki/Symbolic_link).
 
