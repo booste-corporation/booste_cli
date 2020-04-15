@@ -1,7 +1,7 @@
 ![BoosteLogo](diagrams/Logo_Primary_NonTransparent.png)
 
 # Booste CLI 
-The [Booste](www.booste.io) CLI (command line interface) makes remote development feel the same as developing locally.
+The [Booste](https://www.booste.io) CLI (command line interface) makes remote development feel the same as developing locally.
 Write code using local IDEs and code editors, and run it in the cloud with a single execution command.
 
 ![SingleCommand](diagrams/oneword.png)
