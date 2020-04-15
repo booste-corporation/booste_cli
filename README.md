@@ -16,13 +16,15 @@ Booste remote evironments are shareable across your team, eliminating dependency
 - [Local ID](#terminology-local-id)
 - [State](#terminology-state)
 - [Name](#terminology-name)
+
 [Installation](#installation)
 - [Supported Tech Stacks](#installation-supported-stacks)
+
 [CLI Usage](#usage)
 - [Get Help](#usage-help)
 - [Login](#usage-login)
 - [Logout](#usage-logout)
-- [One Line Commands](#usage-vanilla)
+- [Run a Process](#usage-vanilla)
 - [Configure Codebox (ssh)](#usage-activate)
 - [List All Codeboxes](#usage-list)
 - [Set a Default Codebox](#usage-default)
@@ -37,6 +39,7 @@ Booste remote evironments are shareable across your team, eliminating dependency
 - [Report a Bug](#usage-report)
 - [Ask a Question](#usage-ask)
 - [Reset the Client (bug cleaning)](#usage-reset)
+
 [End User License Agreement](#eula)
 
 
