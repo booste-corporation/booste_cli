@@ -1,3 +1,4 @@
+# WSL Setup
 
 Booste runs through the WSL terminal as it would on Linux. 
 
