@@ -16,6 +16,29 @@ Booste remote evironments are shareable across your team, eliminating dependency
 - [Local ID](#terminology-local-id)
 - [State](#terminology-state)
 - [Name](#terminology-name)
+[Installation](#installation)
+- [Supported Tech Stacks](#installation-supported-stacks)
+[CLI Usage](#usage)
+- [Get Help](#usage-help)
+- [Login](#usage-login)
+- [Logout](#usage-logout)
+- [One Line Commands](#usage-vanilla)
+- [Configure Codebox (ssh)](#usage-activate)
+- [List All Codeboxes](#usage-list)
+- [Set a Default Codebox](#usage-default)
+- [Start Codebox](#usage-start)
+- [Stop Codebox](#usage-stop)
+- [Restart Codebox](#usage-restart)
+- [Create a Codebox](#usage-new)
+- [Join a Codebox](#usage-join)
+- [See Codebox Info](#usage-info)
+- [Leave a Codebox](#usage-leave)
+- [Delete a Codebox](#usage-delete)
+- [Report a Bug](#usage-report)
+- [Ask a Question](#usage-ask)
+- [Reset the Client (bug cleaning)](#usage-reset)
+[End User License Agreement](#eula)
+
 
 # <a name="terminology"></a> Terminology 
 
@@ -57,7 +80,7 @@ pip3 install booste-cli
 ```
 We recommend using the most recent version.
 
-### Supported Tech Stacks
+### <a name="installation-supported-stacks"></a> Supported Tech Stacks
 As of release 0.1.25
 
 ### Supported:
@@ -79,9 +102,9 @@ Apps with GUI based engines.
 
 
 
-# CLI Usage
+# <a name="usage"></a> CLI Usage
 
-### Get Help
+### <a name="usage-help"></a> Get Help
 ```bash
 booste
 ```
@@ -90,7 +113,7 @@ booste --help
 ```
 Prints a documentation-like help page to the console.
 
-### Login
+### <a name="usage-login"></a> Login
 ```bash
 booste login {optional: username}
 ```
@@ -100,13 +123,13 @@ You may pass your Booste username directly into the command, or enter it when pr
 
 For account creation, go to www.booste.io/cli/new_user/.
 
-### Logout
+### <a name="usage-logout"></a> Logout
 ```C
 booste logout
 ```
 Logs the current active user out of the system. There may only be one logged-in account per device, and only one logged-in device per user.
 
-### One-Line Commands
+### <a name="usage-vanilla"></a> One-Line Commands
 ```C
 booste {codebox local ID} {unix command to be ran remotely}
 ```
@@ -126,7 +149,7 @@ booste python3 path/to/file.py
 
 This command is meant to execute code files. It will ignore commands that do not point to an executable file.
 
-### Codebox Configuration
+### <a name="usage-activate"></a> Codebox Configuration
 ```C
 booste activate {optional: codebox local ID}
 ```
@@ -142,13 +165,13 @@ Within the activated session, you can leave the codebox by typing the command
 logout
 ```
 
-### List All Codeboxes
+### <a name="usage-list"></a> List All Codeboxes
 ```bash
 booste list
 ```
 Lists the codeboxes to which you have access.
 
-### Set A Default Codebox
+### <a name="usage-default"></a> Set A Default Codebox
 ```bash
 booste default {optional: codebox local ID / "clear"}
 ```
@@ -157,7 +180,7 @@ Saves a codebox as the default codebox, so that local IDs do not need to be expl
 You may pass a codebox local ID directly into the command, or enter it when prompted.
 If "clear" is passed in rather than a local ID, any pre-existing default codebox will be removed.
 
-### Start A Codebox
+### <a name="usage-start"></a> Start A Codebox
 ```C
 booste start {optional: codebox local ID}
 ```
@@ -170,7 +193,7 @@ The codebox will remain running until either the remote or local machines are sh
 
 This will not activate a codebox.
 
-### Stop A Codebox
+### <a name="usage-stop"></a> Stop A Codebox
 ```C
 booste stop {optional: codebox local ID}
 ```
@@ -179,7 +202,7 @@ Booste stop will stop the server hosting your codebox.
 You may pass a codebox local ID directly into the command, or enter it when prompted.
 If a default codebox is set, the local ID may be omitted.
 
-### Restart A Codebox
+### <a name="usage-restart"></a> Restart A Codebox
 ```C
 booste restart {optional: codebox local ID}
 ```
@@ -188,7 +211,7 @@ Booste stop will stop and then restart the server hosting your codebox.
 You may pass a codebox local ID directly into the command, or enter it when prompted.
 If a default codebox is set, the local ID may be omitted.
 
-### Create A New Codebox
+### <a name="usage-new"></a> Create A New Codebox
 ```bash
 booste new {optional: codebox name}
 ```
@@ -200,7 +223,7 @@ Codebox names are not required to be unique, though for clarity we recommend avo
 
 Codeboxes are password protected, and this password is needed for others to join your codebox. Be sure to save it. For codebox password resets, please contact us at password.help@booste.io.
 
-### Join An Existing Codebox
+### <a name="usage-join"></a> Join An Existing Codebox
 ```bash
 booste join {optional: codebox full ID}
 ```
@@ -210,7 +233,7 @@ You may pass the desired codebox id directly into the command, or enter it when 
 
 The full codebox "ID" and the password must be given to you by a team member, to ensure security.
 
-### See Codebox Information
+### <a name="usage-info"></a> See Codebox Information
 ```bash
 booste info {optional: codebox local ID}
 ```
@@ -228,7 +251,7 @@ Prints detailed information about the codebox, including:
 You may pass a codebox local ID directly into the command, or enter it when prompted.
 If a default codebox is set, the local ID may be omitted.
 
-### Leave a Codebox
+### <a name="usage-leave"></a> Leave a Codebox
 ```bash
 booste leave {optional: codebox local ID}
 ```
@@ -241,7 +264,7 @@ You are free to re-join the codebox at any time with the "join" command as it do
 
 To leave a codebox you created, use Delete.
 
-### Permanently Delete a Codebox
+### <a name="usage-delete"></a> Permanently Delete a Codebox
 ```bash
 booste delete {optional: codebox local ID}
 ```
@@ -252,20 +275,20 @@ If a default codebox is set, the local ID may be omitted.
 
 You cannot revive a deleted codebox.
 
-### Report a Bug
+### <a name="usage-report"></a> Report a Bug
 ```bash
 booste report
 ```
 Files a bug report. You will be prompted to explain the bug.
 If bugs become preventative, try running "reset" (below)
 
-### Ask a Question 
+### <a name="usage-ask"></a> Ask a Question 
 ```bash
 booste ask
 ```
 Texts your question directly to a founder's cell phone. You will be prompted to input your question and reply-to phone number.
 
-### Reset the Client (bug cleaning)
+### <a name="usage-reset"></a> Reset the Client (bug cleaning)
 ```bash
 booste reset
 ```
@@ -275,6 +298,6 @@ Use if filesync appears to not be running; it will force a restart.
 
 
 
-## License 
+## <a name="eula"></a> License 
 
 [View EULA (End-User License Agreement)](Booste_EULA.pdf)
