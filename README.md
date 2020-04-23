@@ -29,6 +29,8 @@ Booste remote evironments are shareable across your team, eliminating dependency
 - [Configure Codebox (ssh)](#usage-activate)
 - [List All Codeboxes](#usage-list)
 - [Set a Default Codebox](#usage-default)
+- [Set a New Filesync Directory](#usage-init)
+- [Change Preferences](#usage-preferences)
 - [Start Codebox](#usage-start)
 - [Stop Codebox](#usage-stop)
 - [Restart Codebox](#usage-restart)
@@ -93,7 +95,7 @@ We recommend using the most recent version.
 
 
 # <a name="installation-supported-platforms"></a> Supported Platforms
-As of release 0.1.25
+As of release 0.2.0
 ![Supported](diagrams/SupportedPlatforms.png)
 
 ### Supported:
@@ -101,7 +103,7 @@ As of release 0.1.25
 - MacOS
 - Windows Subsystem For Linux (WSL)<sub>1</sub>
 
-1) Booste can be installed and ran in [Windows 10 WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), with some setup. [See here for WSL setup instructions.](wsl.md)
+1) Booste can be installed and ran in [Windows 10 WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10). The [init](#usage-init) command must be ran in the Windows-visible directory tree in order for files to be editable by Windows based GUI code editors.
 
 ### Not Supported:
 - Windows Command Prompt
@@ -109,7 +111,7 @@ As of release 0.1.25
 
 
 # <a name="installation-supported-stacks"></a> Supported Tech Stacks
-As of release 0.1.25
+As of release 0.2.0
 
 ### Supported:
 - Any<sub>1</sub> interpreted language, such as Python, Node.js, bash.
@@ -206,6 +208,20 @@ Saves a codebox as the default codebox, so that local IDs do not need to be expl
 
 You may pass a codebox local ID directly into the command, or enter it when prompted.
 If "clear" is passed in rather than a local ID, any pre-existing default codebox will be removed.
+
+### <a name="usage-init"></a> Set a New Filesync Directory
+```C
+booste init {optional: path}
+```
+Initializes the specified directory as the filesync directory.
+
+Inserts a bulk/ directory, and .boosteignore at directory root.
+
+### <a name="usage-preferences"></a> Change User Preferences
+```C
+booste preferences
+```
+Enters an interactive preferences screen, for adjusting various user preferences.
 
 ### <a name="usage-start"></a> Start a Codebox
 ```C
