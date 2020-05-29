@@ -8,6 +8,9 @@ Write code using local IDEs and code editors, and run it in the cloud with a sin
 
 Booste remote evironments are shareable across your team, eliminating dependency issues, platform conflicts, and compute restrictions of local hardware. Website and API endpoints ran through Booste are published to public URLs and updated live as you save code. It is the perks of a browser-based IDE, without giving up your preferred local coding workflow.
 
+# Resources Before You Begin
+- Check out [our visual explainer](https://www.booste.io/explain/technical) to see what Booste is actually doing.
+- Join us on our [Discord server](https://discord.gg/mbDeRJf) for discussion, guidance, and suggestions.
 
 # Table of Contents
 [Terminology](#terminology)
