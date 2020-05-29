@@ -61,7 +61,9 @@ At the current state of Booste, each codebox is an isolated server instance, sha
 ### <a name="terminology-active-filesync"></a> Active Filesync
 Active filesync is a background process that syncronizes the codebox files to your local Booste directory.
 
-The synced directory sits at the user level:
+![Filesync](diagrams/sync.png)
+
+The synced directory sits at the user level by default:
 ```bash
 ~/Booste
 ```
@@ -93,7 +95,9 @@ Run this command in your terminal to install the CLI tool:
 ```bash
 pip3 install booste-cli
 ```
-We recommend using the most recent version.
+We recommend using the [most recent version](https://pypi.org/project/booste-cli/).
+
+![Install](diagrams/cli.png)
 
 
 
@@ -161,11 +165,12 @@ booste logout
 ```
 Logs the current active user out of the system. There may only be one logged-in account per device, and only one logged-in device per user.
 
-### <a name="usage-vanilla"></a> One-Line Commands
+### <a name="usage-vanilla"></a> "Vanilla" Commands (One-Off commands into an SSH tunnel)
+![Vanilla](diagrams/vanilla.png)
 ```C
 booste {codebox local ID} {unix command to be ran remotely}
 ```
-Executes the given command in the specified codebox.
+Executes the given command in the specified codebox and prints the output.
 For example, to run a python file in codebox #2, use:
 ```bash
 booste 2 python3 path/to/file.py
@@ -179,9 +184,34 @@ booste default 2
 booste python3 path/to/file.py
 ```
 
+Vanilla commands work for any Unix command. Potential applications include:
+- Print current working directory (within the codebox)
+```bash
+booste pwd
+```
+- Download and install a Python package
+```bash
+booste pip3 install numpy
+```
+- Start a React App
+```bash
+booste npm start
+```
+- Start a Flask backend
+```bash
+booste flask run
+```
+- Compile code
+```bash
+booste go build file.go
+```
+
+Booste assumes that if a command is not part of the Booste CLI, it's intended to be sent to the codebox as a Vanilla command.
+
 This command will fail if pointing toward a directory or file that is not in the filesync directory.
 
-### <a name="usage-activate"></a> Codebox Configuration
+### <a name="usage-activate"></a> Codebox Configuration (Entering an SSH session)
+![Activate](diagrams/activate.png)
 ```C
 booste activate {optional: codebox local ID}
 ```
@@ -270,6 +300,7 @@ Codebox names are not required to be unique, though for clarity we recommend avo
 Codeboxes are password protected, and this password is needed for others to join your codebox. Be sure to save it. For codebox password resets, please contact us at password.help@booste.io.
 
 ### <a name="usage-join"></a> Join an Existing Codebox
+![Join](diagrams/join.png)
 ```C
 booste join {optional: codebox full ID}
 ```
