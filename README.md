@@ -166,7 +166,6 @@ booste logout
 Logs the current active user out of the system. There may only be one logged-in account per device, and only one logged-in device per user.
 
 ### <a name="usage-vanilla"></a> "Vanilla" Commands (One-Off commands into an SSH tunnel)
-![Vanilla](diagrams/vanilla.png)
 ```C
 booste {codebox local ID} {unix command to be ran remotely}
 ```
@@ -183,6 +182,8 @@ booste default 2
 ```bash
 booste python3 path/to/file.py
 ```
+
+![Vanilla](diagrams/vanilla.png)
 
 Vanilla commands work for any Unix command. Potential applications include:
 - Print current working directory (within the codebox)
@@ -211,7 +212,6 @@ Booste assumes that if a command is not part of the Booste CLI, it's intended to
 This command will fail if pointing toward a directory or file that is not in the filesync directory.
 
 ### <a name="usage-activate"></a> Codebox Configuration (Entering an SSH session)
-![Activate](diagrams/activate.png)
 ```C
 booste activate {optional: codebox local ID}
 ```
@@ -219,6 +219,8 @@ Connects you into the selected codebox. You are placed into an [ssh](https://www
 
 You may pass a codebox local ID directly into the command, or enter it when prompted.
 If a default codebox is set, the local ID may be omitted.
+
+![Activate](diagrams/activate.png)
 
 It is through Activate that users set up the codebox environment, through tools such as [pip](https://pip.pypa.io/en/stable/), [npm](https://www.npmjs.com/), or [gem](https://rubygems.org/). When setting up the codebox, make sure that packages are available globally (no virtual environments or containers).
 
@@ -300,7 +302,6 @@ Codebox names are not required to be unique, though for clarity we recommend avo
 Codeboxes are password protected, and this password is needed for others to join your codebox. Be sure to save it. For codebox password resets, please contact us at password.help@booste.io.
 
 ### <a name="usage-join"></a> Join an Existing Codebox
-![Join](diagrams/join.png)
 ```C
 booste join {optional: codebox full ID}
 ```
@@ -309,6 +310,8 @@ Adds you as a member into an existing codebox.
 You may pass the desired codebox id directly into the command, or enter it when prompted. A password entry prompt will follow.
 
 The full codebox "ID" and the password must be given to you by a team member, to ensure security.
+
+![Join](diagrams/join.png)
 
 ### <a name="usage-info"></a> See Codebox Information
 ```C
